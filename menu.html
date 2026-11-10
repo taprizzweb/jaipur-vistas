@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Menu | Jaipur Vista – Café with a View</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="menu">
+<header id="site-header"></header>
+<main id="main">
+<section class="page-hero"><div class="wrap">
+ <p class="eyebrow" style="color:var(--gold)">Royal flavours · café classics</p>
+ <h1 class="display">Our menu.<br><em>Jaipur on a plate.</em></h1>
+ <p>From the royal kitchens of Rajasthan to your favourite café comforts — all served with the best view in the Pink City.</p>
+</div></section>
+<div class="pottery" aria-hidden="true"></div>
+<nav class="cat-nav" aria-label="Menu categories"><div class="wrap" id="catnav"></div></nav>
+<div id="menu"></div>
+<section class="banner section-pad" style="margin-top:80px"><div class="wrap">
+ <p class="eyebrow">Ask for a view seat</p>
+ <h2 class="display">Jaipur aaye ho?<br><em>Toh Vista zaroor aana.</em></h2>
+ <p>Send us a WhatsApp message and we’ll keep your table — with a view — ready.</p>
+ <a class="button button-cream" data-wa>Reserve a table now <svg class="arrow"><use href="#i-arrow"/></svg></a>
+</div></section>
+</main>
+<div class="pottery" aria-hidden="true"></div>
+<footer id="site-footer"></footer>
+<script>
+// MENU — items aur prices yahan badlein: [naam, description, price, tags]
+const MENU=[
+ ["rajasthani","Rajasthani specials","Royal recipes from the kitchens of Rajasthan.",[
+  ["Vista Shahi Thali","Dal baati churma, ker sangri, gatte ki sabzi, bajra roti, rice and sweet","₹549",["Signature"]],
+  ["Dal Baati Churma","Ghee-roasted baati, panchmel dal and sweet churma","₹349",[]],
+  ["Gatte ki Sabzi","Gram-flour dumplings in a tangy yoghurt gravy, with roti","₹299",[]],
+  ["Ker Sangri","Desert beans and berries, tossed in Rajasthani spices","₹329",["Vegan"]],
+  ["Paneer Lababdar","Cottage cheese in a rich tomato-cashew gravy","₹379",[]],
+  ["Missi Roti & Lahsun Chutney","Spiced gram-flour roti with fiery garlic chutney","₹189",["Vegan"]]]],
+ ["snacks","Jaipuri snacks","The flavours of Jaipur’s bazaars.",[
+  ["Pyaaz Kachori","Jaipur’s famous onion kachori with imli chutney","₹129",[]],
+  ["Mirchi Vada","Stuffed green chilli fritters, a Jodhpuri favourite","₹129",["Vegan"]],
+  ["Samosa Chaat","Crushed samosa, chole, curd and chutneys","₹159",[]],
+  ["Pav Bhaji","Buttery pav with a spicy vegetable bhaji","₹219",[]]]],
+ ["chai-coffee","Chai & coffee","Slow chai and fresh coffee, made for the view.",[
+  ["Kulhad Masala Chai","Spiced chai served in a clay kulhad","₹79",["Must try"]],
+  ["Sunset Cappuccino","Our signature double-shot cappuccino","₹189",[]],
+  ["Vista Cold Coffee","Thick, creamy cold coffee with ice cream","₹229",[]],
+  ["Pour-over","Single-origin Indian coffee, brewed by hand","₹249",[]],
+  ["Kesar Badam Milk","Saffron and almond milk, served warm or chilled","₹169",[]],
+  ["Rose Lassi","Sweet lassi with a hint of Jaipur rose","₹149",[]]]],
+ ["cafe","Café classics","Something familiar, done beautifully.",[
+  ["Vista Margherita Pizza","Hand-stretched base, basil and mozzarella","₹399",[]],
+  ["Penne Arrabbiata","Spicy tomato and garlic sauce","₹349",["Vegan"]],
+  ["Grilled Club Sandwich","Triple-decker with veggies, cheese and fries","₹299",[]],
+  ["Avocado Sourdough Toast","Smashed avocado, cherry tomato, chilli flakes","₹329",["Vegan"]]]],
+ ["desserts","Sweet finish","A royal little ending.",[
+  ["Malai Ghewar","Jaipur’s famous honeycomb sweet with rabri","₹199",["Seasonal"]],
+  ["Gulab Jamun with Rabri","Warm jamuns on chilled rabri","₹169",[]],
+  ["Hot Chocolate Brownie","With a scoop of vanilla ice cream","₹229",[]]]]];
+document.getElementById('catnav').innerHTML=MENU.map(c=>`<a href="#${c[0]}">${c[1]}</a>`).join('');
+document.getElementById('menu').innerHTML=MENU.map(c=>`<section class="menu-cat" id="${c[0]}"><div class="wrap"><h2 class="display">${c[1]}</h2><p>${c[2]}</p><div class="items">${c[3].map(i=>`<div class="item"><div><h3>${i[0]}</h3><p>${i[1]}</p>${i[3].length?`<div class="tags">${i[3].map(t=>`<i>${t}</i>`).join('')}</div>`:''}</div><span class="price">${i[2]}</span></div>`).join('')}</div></div></section>`).join('');
+</script>
+<script src="partials.js"></script>
+</body></html>
