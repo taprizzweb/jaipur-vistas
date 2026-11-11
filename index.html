@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://jaipur-vista.vercel.app/assets/photos/view-rooftop.jpg">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Jaipur Vista Cafe","slogan":"Café with a view","url":"https://jaipur-vista.vercel.app/","telephone":"+91-99283-91150","priceRange":"₹200–1,200","image":"https://jaipur-vista.vercel.app/assets/photos/view-rooftop.jpg","address":{"@type":"PostalAddress","streetAddress":"2nd & 3rd Floor, 34, Temple Amrit Raghunath, Dhabai Ji Ka Rasta, opposite Hawa Mahal","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302002","addressCountry":"IN"},"openingHours":"Mo-Su 08:00-22:00","servesCuisine":["Pizza","Italian","Indian","Chinese","Café"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"423"}}</script>
 </head>
@@ -22,10 +22,11 @@
 
 <!-- HERO -->
 <section class="hero">
+ <div class="hero-blob" aria-hidden="true"></div>
  <div class="wrap hero-grid">
   <div class="hero-copy">
    <p class="pill"><svg aria-hidden="true"><use href="#i-pin"/></svg>Rooftop café · Opposite Hawa Mahal</p>
-   <h1>Jaipur aaye ho?<br><span class="hl">Don’t miss a meal</span> at Jaipur Vista.</h1>
+   <h1 class="hero-h"><span class="hw">Jaipur aaye ho?</span><br><span class="hl">Don’t miss a meal</span> at Jaipur Vista.</h1>
    <p class="lede">Pizza, pasta and chai on an open rooftop — with the Palace of Winds right in front of your table. Perfect for a meal, a celebration or your next photoshoot.</p>
    <div class="ctas">
     <a class="btn" data-wa="Hi Jaipur Vista! I would like to book a table."><svg aria-hidden="true"><use href="#i-wa"/></svg>Book a table</a>
@@ -33,18 +34,38 @@
    </div>
   </div>
   <div class="hero-media">
+   <svg class="motif spin" aria-hidden="true" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="50" cy="50" r="10"/><circle cx="50" cy="50" r="46" stroke-dasharray="2 5"/><path d="M50 8c7 12 7 22 0 30-7-8-7-18 0-30ZM50 92c7-12 7-22 0-30-7 8-7 18 0 30ZM8 50c12-7 22-7 30 0-8 7-18 7-30 0ZM92 50c-12-7-22-7-30 0 8 7 18 7 30 0Z"/><path d="M20 20c14 3 21 10 22 22-12-1-19-8-22-22ZM80 80c-14-3-21-10-22-22 12 1 19 8 22 22ZM80 20c-3 14-10 21-22 22 1-12 8-19 22-22ZM20 80c3-14 10-21 22-22-1 12-8 19-22 22Z"/></g></svg>
    <img class="hero-img" src="assets/photos/view-rooftop.jpg" alt="Guests at a rooftop table at Jaipur Vista with Hawa Mahal behind them" fetchpriority="high">
+   <img class="hero-mini m1" src="assets/photos/food-pizza.jpg" alt="Loaded veggie pizza" loading="lazy">
+   <img class="hero-mini m2" src="assets/photos/celebrate-roseheart.jpg" alt="Rose-heart frame in front of Hawa Mahal" loading="lazy">
+   <span class="note n1">best seat in Jaipur!</span>
    <a class="rating-card" id="rating-card" target="_blank" rel="noopener">
     <span class="g">G</span>
-    <span><b>4.9</b> <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small>423 Google reviews</small></span>
+    <span><b><span class="count" data-to="4.9" data-dec="1">4.9</span></b> <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><small><span class="count" data-to="423">423</span> Google reviews</small></span>
    </a>
   </div>
  </div>
  <div class="wrap facts">
-  <div><svg aria-hidden="true"><use href="#i-pin"/></svg><span><b>Opposite Hawa Mahal</b>2nd &amp; 3rd floor rooftop</span></div>
-  <div><svg aria-hidden="true"><use href="#i-clock"/></svg><span><b>8 am – 10 pm</b>Open every day</span></div>
-  <div><svg aria-hidden="true"><use href="#i-rupee"/></svg><span><b>₹200 – 1,200</b>Per person</span></div>
-  <div><svg aria-hidden="true"><use href="#i-camera"/></svg><span><b>Photo-friendly</b>Shoots welcome</span></div>
+  <div class="reveal"><svg aria-hidden="true"><use href="#i-pin"/></svg><span><b>Opposite Hawa Mahal</b>2nd &amp; 3rd floor rooftop</span></div>
+  <div class="reveal"><svg aria-hidden="true"><use href="#i-clock"/></svg><span><b>8 am – 10 pm</b>Open every day</span></div>
+  <div class="reveal"><svg aria-hidden="true"><use href="#i-rupee"/></svg><span><b>₹200 – 1,200</b>Per person</span></div>
+  <div class="reveal"><svg aria-hidden="true"><use href="#i-camera"/></svg><span><b>Photo-friendly</b>Shoots welcome</span></div>
+ </div>
+</section>
+
+<div class="tiles" aria-hidden="true"></div>
+
+<!-- MOODS -->
+<section id="moods" class="moods">
+ <div class="wrap moods-grid">
+  <div class="moods-copy reveal">
+   <p class="kicker">One view, three moods</p>
+   <h2>Hawa Mahal changes all day. <span class="script">Pick yours.</span></h2>
+   <div class="mood-tabs" role="tablist" aria-label="Time of day" id="mood-tabs"></div>
+   <p class="mood-text" id="mood-text" aria-live="polite"></p>
+   <a class="btn" id="mood-cta" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Book this slot</span></a>
+  </div>
+  <div class="mood-stage reveal" id="mood-stage"></div>
  </div>
 </section>
 
@@ -53,12 +74,12 @@
  <div class="wrap">
   <div class="head center reveal">
    <p class="kicker">Why visit</p>
-   <h2>Three reasons it’s on every Jaipur list</h2>
+   <h2>Three reasons it’s on every <span class="script">Jaipur list</span></h2>
   </div>
   <div class="why-grid">
-   <article class="why reveal"><img src="assets/photos/view-sunset.jpg" alt="Hawa Mahal at sunset from the rooftop" loading="lazy"><div><h3>The view</h3><p>Walk in and the whole façade of Hawa Mahal is right in front of you — golden at sunset, lit up after dark.</p></div></article>
-   <article class="why reveal"><img src="assets/photos/food-pizza.jpg" alt="Loaded veggie pizza" loading="lazy"><div><h3>The food</h3><p>Crispy-crust pizzas with real mozzarella, pastas, sandwiches, Indian and Chinese — fresh and fairly priced.</p></div></article>
-   <article class="why reveal"><img src="assets/photos/view-terrace.jpg" alt="Couple posing on the terrace in front of Hawa Mahal" loading="lazy"><div><h3>The photos</h3><p>A checkerboard terrace, wave benches and the palace behind you. Couples and creators love it here.</p></div></article>
+   <article class="why reveal" style="--d:0s"><span class="num">01</span><img src="assets/photos/view-sunset.jpg" alt="Hawa Mahal at sunset from the rooftop" loading="lazy"><div><h3>The view</h3><p>Walk in and the whole façade of Hawa Mahal is right in front of you — golden at sunset, lit up after dark.</p></div></article>
+   <article class="why reveal" style="--d:.12s"><span class="num">02</span><img src="assets/photos/food-pizza.jpg" alt="Loaded veggie pizza" loading="lazy"><div><h3>The food</h3><p>Crispy-crust pizzas with real mozzarella, pastas, sandwiches, Indian and Chinese — fresh and fairly priced.</p></div></article>
+   <article class="why reveal" style="--d:.24s"><span class="num">03</span><img src="assets/photos/view-terrace.jpg" alt="Couple posing on the terrace in front of Hawa Mahal" loading="lazy"><div><h3>The photos</h3><p>A checkerboard terrace, wave benches and the palace behind you. Couples and creators love it here.</p></div></article>
   </div>
  </div>
 </section>
@@ -79,7 +100,7 @@
  <div class="wrap cel-grid">
   <div class="cel-copy reveal">
    <p class="kicker">Celebrations &amp; shoots</p>
-   <h2>Plan your special moment with us</h2>
+   <h2>Plan your <span class="script">special moment</span> with us</h2>
    <p class="muted">Tell us the occasion on WhatsApp and our team will help with décor, timing and seating.</p>
    <ul class="occ-list" id="occ-list"></ul>
   </div>
@@ -110,9 +131,11 @@
  </div>
 </section>
 
+<div class="tiles" aria-hidden="true"></div>
 <!-- BOOK -->
 <section id="book" class="book">
  <div class="wrap book-in reveal">
+  <span class="wa-pulse" aria-hidden="true"><svg><use href="#i-wa"/></svg></span>
   <h2>Save your rooftop table</h2>
   <p>Sunset tables fill up first. Tap an option and send us a message on WhatsApp.</p>
   <div class="book-btns" id="book-btns"></div>
