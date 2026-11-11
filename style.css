@@ -426,3 +426,15 @@ body:not(.ready) .hero .split .lw{transform:translateY(105%)!important}
  .reveal,.reveal-img,.split .lw{opacity:1!important;transform:none!important;clip-path:none!important}
  .marquee-track,.rv-track{animation:none!important}
 }
+
+/* review text clamp + read more */
+.rv-text{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.rv-text p{font-size:15px;color:var(--ink);line-height:1.6}
+.rv-text p+p{margin-top:8px}
+.rv-card.open .rv-text{-webkit-line-clamp:unset;display:block}
+.rv-more{align-self:flex-start;font-size:13px;font-weight:600;color:var(--blue);margin-top:-4px}
+.rv-more:hover{text-decoration:underline}
+.rv-card{align-self:flex-start}
+a.dm-badge:hover{transform:translateY(-3px)}
+.dm-badge{transition:transform .4s var(--ease),opacity .9s var(--ease)}
+.menu-note{background:var(--paper);border-radius:var(--r);padding:18px 22px;color:var(--muted);font-size:14.5px;margin-top:40px}

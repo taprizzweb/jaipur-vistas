@@ -7,9 +7,9 @@ Static website (no build step). Open `index.html` in a browser or host the folde
 1. **Phone / WhatsApp** — `phone` aur `wa` (WhatsApp number, country code ke saath, bina `+` ke). Saari bookings isi number par WhatsApp message ke roop mein aayengi.
 2. **Hours / address** — `hours`, `address`.
 3. **Google rating** — `rating` aur `reviewCount` bharein (Google Maps par dikh raha number). Khali rahega toh number nahi dikhega.
-4. **Google reviews** — Google Maps → Jaipur Vista Cafe → Reviews se 6–10 best reviews `REVIEWS` mein paste karein, phir `reviewsAreSamples: false` kar dein. Tab tak site par "Sample reviews" label dikhta rahega.
-5. **Photos** — Google Business Profile se apni (owner ki) photos download karke `assets/photos/` mein daalein aur `PHOTOS` mein `src: "assets/photos/rooftop.jpg"` likhein. Abhi stock (Unsplash) photos lagi hain.
-6. **Menu & prices** — `menu.html` ke andar `MENU` array.
+4. **Google reviews** — real reviews copied from Google Maps are in `REVIEWS`. Add new ones the same way.
+5. **Photos** — owner photos from Google Business Profile live in `assets/photos/` and are listed in `PHOTOS`.
+6. **Menu & prices** — `MENU` array inside `menu.html` (prices are blank until you add them).
 
 ## Files
 - `index.html` — home page (hero, don't-miss, dishes, celebrations, influencer points, gallery, reviews, booking, map)

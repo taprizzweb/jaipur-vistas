@@ -1,6 +1,6 @@
 /* Jaipur Vista — home page sections */
 (() => {
-const C = window.CAFE, U = window.U, $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const C = window.CAFE, U = window.U, P = window.P, $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ar = '<svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg>';
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -15,6 +15,7 @@ else { let fired = false; const go = () => { if (!fired) { fired = true; setTime
 /* ---------- Google bits ---------- */
 const hasRating = C.rating && C.reviewCount;
 $('#g-chip').href = C.googleLink;
+$('#dm-badge').href = C.googleLink;
 if (hasRating) $('#g-chip-txt').innerHTML = `<b>${C.rating}</b> ★ · ${Number(C.reviewCount).toLocaleString('en-IN')} Google reviews`;
 $('#rv-all').href = C.googleLink;
 $('#rv-write').href = C.googleLink;
@@ -24,15 +25,15 @@ $('#g-summary').innerHTML = `<div class="g-big"><span class="g-logo lg" aria-hid
 
 /* ---------- signature plates rail ---------- */
 const dishes = [
-  ['1567337710282-00832b415979', 'Vista Shahi Thali', 'Dal baati churma, gatte, ker sangri, bajra roti & a sweet — a Rajput feast on one plate.', 'Signature'],
-  ['1571934811356-5cc061b6821f', 'Kulhad Masala Chai', 'Slow-brewed with ginger and elaichi, poured into a clay kulhad. Best at sunset.', 'Must try'],
-  ['1601050690597-df0568f70950', 'Pyaaz Kachori & Samosa', 'Jaipur’s favourite breakfast, crisp and flaky, with imli and mint chutney.', 'Street classic'],
-  ['1585937421612-70a008356fbe', 'Paneer Lababdar', 'Soft paneer in a rich tomato-cashew gravy with butter naan.', 'Comfort'],
-  ['1561336313-0bd5e0b27ec8', 'Sunset Coffee Flight', 'Cappuccino, cold brew and iced latte — for the indecisive and the curious.', 'For two'],
-  ['1530062845289-9109b2c9c868', 'Vista Sharing Platter', 'Chaat, kebabs, dips and breads to pass around the table while you take in the view.', 'Groups']
+  [P('food-pizza'), 'Signature Pizzas', 'Crispy crust and real mozzarella. Guests’ picks: Pesto Mexicano, Caprino and Mushroom.', 'Most loved'],
+  [P('food-sandwich'), 'Pesto Mushroom Sandwich', 'Toasted, golden and packed with herby pesto mushrooms — a guest favourite.', 'Signature'],
+  [U('1571934811356-5cc061b6821f', 800), 'Chai with a View', 'A hot cup of chai with Hawa Mahal right in front of you. The simplest pleasure in Jaipur.', 'Must try'],
+  [P('food-penne'), 'Pink Sauce Penne', 'Creamy, tangy and comforting — our most-ordered pasta.', 'Comfort'],
+  [P('food-pasta-garlic'), 'Pasta & Cheesy Garlic Bread', 'Make it a meal with a side of buttery, cheese-loaded garlic bread.', 'For sharing'],
+  [P('food-dinner-view'), 'Dinner under the lights', 'European, Indian and Chinese plates, served as the palace lights up for the night.', 'After dark']
 ];
 $('#rail').innerHTML = dishes.map((d, i) => `<article class="dish reveal" style="--i:${i}">
-  <div class="dish-img"><img src="${U(d[0], 800)}" alt="${d[1]}" loading="lazy" draggable="false"><span class="tag">${d[3]}</span></div>
+  <div class="dish-img"><img src="${d[0]}" alt="${d[1]}" loading="lazy" draggable="false"><span class="tag">${d[3]}</span></div>
   <h3>${d[1]}</h3><p>${d[2]}</p></article>`).join('') + `<a class="dish dish-more reveal" href="menu.html"><span>See the<br>full menu</span>${ar}</a>`;
 
 /* drag-to-scroll */
@@ -45,16 +46,16 @@ rail.addEventListener('click', e => { if (moved) { e.preventDefault(); moved = f
 
 /* ---------- celebrations ---------- */
 const events = [
-  ['birthday', 'i-cake', 'Birthday celebrations', '1530103862676-de8c9debad1d', 'Balloons, a cake moment at golden hour and Hawa Mahal lit up behind you. We handle the décor — you blow the candles.', ['Custom décor', 'Cake on request', 'Sunset slot']],
-  ['prewedding', 'i-heart', 'Pre-wedding shoots', '1478146896981-b80fe463b330', 'Pink sandstone, carved jharokhas and soft evening light — Jaipur’s most cinematic backdrop for your love story.', ['Early-morning slots', 'Rooftop access', 'Outfit change space']],
-  ['wedding', 'i-ring', 'Wedding & couple shoots', '1610173826608-bd1f53a52db1', 'Bride-and-groom portraits and family frames with the Palace of Winds in the background. Royal, without the palace price tag.', ['Photographer-friendly', 'Group portraits', 'Flexible timing']],
-  ['proposal', 'i-sparkle', 'Proposals & anniversaries', '1606800052052-a08af7148866', 'A private corner, candles, flowers and the city glowing below. Tell us the plan — we’ll keep the secret.', ['Private corner', 'Flowers & candles', 'Surprise co-ordination']],
-  ['party', 'i-users', 'Other celebrations', '1511795409834-ef04bbd61622', 'Kitty parties, family get-togethers, farewells, office lunches — group menus and reserved seating for every reason to celebrate.', ['Group menus', 'Reserved section', 'Kids welcome']],
-  ['creator', 'i-phoneplay', 'Influencer & creator shoots', '1516035069371-29a1b244cc32', 'Reels, vlogs, food content and brand shoots with one of India’s most recognised landmarks in frame.', ['Shoot slots', 'Food styling help', 'Collabs welcome']]
+  ['birthday', 'i-cake', 'Birthday celebrations', P('celebrate-roseheart'), 'Rose-heart frames, balloons and a cake moment at golden hour with Hawa Mahal lit up behind you. We handle the décor — you blow the candles.', ['Custom décor', 'Cake on request', 'Sunset slot']],
+  ['prewedding', 'i-heart', 'Pre-wedding shoots', P('view-terrace'), 'Pink sandstone, carved jharokhas and soft evening light — Jaipur’s most cinematic backdrop for your love story, from our open terrace.', ['Rooftop access', 'Early-morning slots', 'Photographer on request']],
+  ['wedding', 'i-ring', 'Wedding & couple shoots', P('view-daylight'), 'Bride-and-groom portraits and family frames with the full façade of the Palace of Winds behind you.', ['Photographer-friendly', 'Full façade in frame', 'Flexible timing']],
+  ['proposal', 'i-sparkle', 'Proposals & anniversaries', P('celebrate-candles'), 'Heart arches, rose petals, candles and the city glowing below. Tell us the plan — we’ll keep the secret.', ['Heart & candle décor', 'Flowers', 'Surprise co-ordination']],
+  ['party', 'i-users', 'Other celebrations', P('celebrate-floral'), 'Kitty parties, family get-togethers, farewells, office lunches — floral set-ups and reserved seating for every reason to celebrate.', ['Floral set-ups', 'Reserved section', 'Group menus']],
+  ['creator', 'i-phoneplay', 'Influencer & creator shoots', P('view-blue'), 'Reels, vlogs, food content and brand shoots with one of India’s most recognised landmarks in frame — day or night.', ['Shoot slots', 'Day & night looks', 'Collabs welcome']]
 ];
 window.EVENT_TYPES = events;
 $('#events').innerHTML = events.map((e, i) => `<article class="event reveal" style="--i:${i % 3}">
-  <div class="event-img"><img src="${U(e[3], 900)}" alt="" loading="lazy"></div>
+  <div class="event-img"><img src="${e[3]}" alt="" loading="lazy"></div>
   <div class="event-body">
    <span class="event-ic"><svg aria-hidden="true"><use href="#${e[1]}"/></svg></span>
    <h3>${e[2]}</h3><p>${e[4]}</p>
@@ -70,10 +71,10 @@ if (!RM && matchMedia('(hover:hover)').matches) $$('.event').forEach(c => {
 
 /* ---------- insta spots ---------- */
 const spots = [
-  [50, 46, 'The Jharokha Frame', 'Stand at our arched window and let the 953 windows of Hawa Mahal fill the background. The most-shot frame in the café.'],
-  [22, 70, 'Golden Hour Rooftop', 'From 5 to 7 pm the façade turns from pink to gold. Perfect for portraits, slow-mo reels and couple shots.'],
-  [80, 28, 'Chai-with-a-View Table', 'A kulhad, a thali and the palace behind — the flat-lay that gets the most saves.'],
-  [72, 78, 'Pink City Street Shot', 'Bazaar life, rickshaws and the old-city buzz below — great for vlogs and travel B-roll.']
+  [50, 30, 'The Hawa Mahal Wall', 'Stand at the terrace edge and the entire façade — all 953 windows — fills your frame. The shot every guest takes first.'],
+  [12, 92, 'Checkerboard Terrace', 'Our black-and-white geometric floor gives strong leading lines for couple walks, outfit reels and wide portraits.'],
+  [88, 80, 'The Wave Benches', 'Sculpted white wave seats in front of the palace — our signature pose spot, and stunning when Hawa Mahal lights up at night.'],
+  [74, 55, 'Golden Hour Corner', 'From 5 to 7 pm the pink sandstone turns gold. Book this slot for portraits, slow-mo reels and proposal moments.']
 ];
 $('#ig-tag').textContent = '@' + C.insta; $('#ig-tag').href = 'https://instagram.com/' + C.insta;
 $('#pins').innerHTML = spots.map((s, i) => `<button class="pin" style="left:${s[0]}%;top:${s[1]}%;--i:${i}" data-i="${i}" aria-label="Spot ${i + 1}: ${s[2]}"><span>${i + 1}</span></button>`).join('');
@@ -87,9 +88,9 @@ $$('.pin').forEach((p, i) => p.onclick = () => setSpot(i));
 setSpot(0);
 
 /* ---------- gallery + lightbox ---------- */
-const P = window.PHOTOS, mas = $('#masonry');
+const PH = window.PHOTOS, mas = $('#masonry');
 const renderGal = f => {
-  mas.innerHTML = P.map((p, i) => ({ p, i })).filter(o => f === 'all' || o.p.cat === f).map(({ p, i }, k) =>
+  mas.innerHTML = PH.map((p, i) => ({ p, i })).filter(o => f === 'all' || o.p.cat === f).map(({ p, i }, k) =>
     `<button class="tile reveal-img" style="--i:${k % 4}" data-i="${i}" aria-label="Open photo: ${esc(p.cap)}"><img src="${p.src}" alt="${esc(p.cap)}" loading="lazy"><span class="cap">${esc(p.cap)}</span></button>`).join('');
   window.JV.observe(mas);
 };
@@ -100,7 +101,7 @@ $$('.filters button').forEach(b => b.onclick = () => {
 });
 const lb = $('#lightbox'), lbImg = lb.querySelector('img'), lbCap = lb.querySelector('figcaption');
 let cur = 0, lastFocus = null, list = [];
-const show = i => { cur = (i + list.length) % list.length; const p = P[list[cur]]; lbImg.src = p.src.replace(/w=\d+/, 'w=1800'); lbImg.alt = p.cap; lbCap.textContent = p.cap; };
+const show = i => { cur = (i + list.length) % list.length; const p = PH[list[cur]]; lbImg.src = p.src; lbImg.alt = p.cap; lbCap.textContent = p.cap; };
 mas.addEventListener('click', e => {
   const t = e.target.closest('.tile'); if (!t) return;
   list = $$('.tile').map(x => +x.dataset.i); lastFocus = t;
@@ -125,10 +126,17 @@ const R = window.REVIEWS;
 const initials = n => n.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
 const hues = ['#16397a', '#a8402a', '#0e7468', '#b8862f', '#5b3a8c', '#1f6f9f'];
 const card = (r, i) => `<article class="rv-card"><header><span class="av" style="background:${hues[i % hues.length]}">${esc(initials(r.name))}</span><div><b>${esc(r.name)}</b><small>${esc(r.when)}</small></div><span class="g-logo" aria-hidden="true">G</span></header>
- <span class="stars" aria-label="${r.stars} out of 5 stars">${'<svg><use href="#i-star"/></svg>'.repeat(r.stars)}</span><p>${esc(r.text)}</p></article>`;
+ <span class="stars" aria-label="${r.stars} out of 5 stars">${'<svg><use href="#i-star"/></svg>'.repeat(r.stars)}</span><div class="rv-text">${r.text.split(/\n+/).map(p => `<p>${esc(p)}</p>`).join('')}</div><button class="rv-more" type="button" aria-expanded="false">Read more</button></article>`;
 const track = $('#rv-track');
 track.innerHTML = R.map(card).join('') + `<div class="rv-dup" aria-hidden="true">${R.map(card).join('')}</div>`;
 if (C.reviewsAreSamples) $('#reviews .sec-head > div').insertAdjacentHTML('beforeend', '<p class="sample-flag">Sample reviews — replace with your Google reviews in data.js</p>');
+track.addEventListener('click', e => {
+  const b = e.target.closest('.rv-more'); if (!b) return;
+  const c = b.closest('.rv-card'), o = c.classList.toggle('open');
+  b.textContent = o ? 'Show less' : 'Read more'; b.setAttribute('aria-expanded', o);
+});
+track.querySelectorAll('.rv-dup button').forEach(b => b.tabIndex = -1);
+requestAnimationFrame(() => track.querySelectorAll('.rv-card').forEach(c => { const t = c.querySelector('.rv-text'); if (t.scrollHeight <= t.clientHeight + 4) c.querySelector('.rv-more').remove(); }));
 const pb = $('#rv-pause');
 pb.onclick = () => { const p = track.classList.toggle('paused'); pb.textContent = p ? 'Play' : 'Pause'; pb.setAttribute('aria-pressed', p); };
 if (RM) { track.classList.add('paused'); pb.textContent = 'Play'; pb.setAttribute('aria-pressed', true); }

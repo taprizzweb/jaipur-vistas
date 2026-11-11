@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Menu | Jaipur Vista Café — Opposite Hawa Mahal, Jaipur</title>
-<meta name="description" content="The Jaipur Vista menu — Rajasthani thalis, Jaipuri snacks, kulhad chai, coffee, café classics and desserts, served with a view of Hawa Mahal.">
+<meta name="description" content="The Jaipur Vista menu — signature pizzas, pasta, pesto mushroom sandwich, Indian & Chinese dishes and chai, served on a rooftop opposite Hawa Mahal.">
 <meta name="theme-color" content="#16397a">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,11 @@
 <header id="site-header"></header>
 <main id="main">
 <section class="page-hero">
- <div class="bg" data-speed="-0.2"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=2000&q=70" alt=""></div>
+ <div class="bg" data-speed="-0.2"><img src="assets/photos/food-dinner-view.jpg" alt=""></div>
  <div class="wrap">
-  <p class="eyebrow">Royal flavours · café classics</p>
-  <h1 class="split">Our menu.<br><em>Jaipur on a plate.</em></h1>
-  <p class="reveal">From the royal kitchens of Rajasthan to your favourite café comforts — all served with a view of Hawa Mahal.</p>
+  <p class="eyebrow">European · Indian · Chinese</p>
+  <h1 class="split">Our menu.<br><em>Served with a view.</em></h1>
+  <p class="reveal">Pizzas, pastas, sandwiches, Indian and Chinese favourites and hot chai — all served with Hawa Mahal right in front of you.</p>
  </div>
 </section>
 <nav class="cat-nav" aria-label="Menu categories"><div class="wrap" id="catnav"></div></nav>
@@ -36,39 +36,29 @@
 <script>
 // MENU — items aur prices yahan badlein: [naam, description, price, tags]
 const MENU=[
- ["rajasthani","Rajasthani specials","Royal recipes from the kitchens of Rajasthan.","1567337710282-00832b415979",[
-  ["Vista Shahi Thali","Dal baati churma, ker sangri, gatte ki sabzi, bajra roti, rice and a sweet","₹549",["Signature"]],
-  ["Dal Baati Churma","Ghee-roasted baati, panchmel dal and sweet churma","₹349",[]],
-  ["Gatte ki Sabzi","Gram-flour dumplings in a tangy yoghurt gravy, with roti","₹299",[]],
-  ["Ker Sangri","Desert beans and berries, tossed in Rajasthani spices","₹329",["Vegan"]],
-  ["Paneer Lababdar","Cottage cheese in a rich tomato-cashew gravy","₹379",[]],
-  ["Missi Roti & Lahsun Chutney","Spiced gram-flour roti with fiery garlic chutney","₹189",["Vegan"]]]],
- ["snacks","Jaipuri snacks","The flavours of Jaipur’s bazaars.","1601050690597-df0568f70950",[
-  ["Pyaaz Kachori","Jaipur’s famous onion kachori with imli chutney","₹129",["Must try"]],
-  ["Mirchi Vada","Stuffed green chilli fritters","₹129",["Vegan"]],
-  ["Samosa Chaat","Crushed samosa, chole, curd and chutneys","₹159",[]],
-  ["Pav Bhaji","Buttery pav with a spicy vegetable bhaji","₹219",[]]]],
- ["chai-coffee","Chai & coffee","Slow chai and fresh coffee, made for the view.","1561336313-0bd5e0b27ec8",[
-  ["Kulhad Masala Chai","Spiced chai served in a clay kulhad","₹79",["Must try"]],
-  ["Sunset Cappuccino","Our signature double-shot cappuccino","₹189",[]],
-  ["Vista Cold Coffee","Thick, creamy cold coffee with ice cream","₹229",[]],
-  ["Kesar Badam Milk","Saffron and almond milk, warm or chilled","₹169",[]],
-  ["Rose Lassi","Sweet lassi with a hint of Jaipur rose","₹149",[]]]],
- ["cafe","Café classics","Something familiar, done beautifully.","1530062845289-9109b2c9c868",[
-  ["Vista Margherita Pizza","Hand-stretched base, basil and mozzarella","₹399",[]],
-  ["Penne Arrabbiata","Spicy tomato and garlic sauce","₹349",["Vegan"]],
-  ["Grilled Club Sandwich","Triple-decker with veggies, cheese and fries","₹299",[]],
-  ["Vista Sharing Platter","Chaat, kebabs, dips and breads for the table","₹549",["For groups"]]]],
- ["desserts","Sweet finish","A royal little ending.","1585937421612-70a008356fbe",[
-  ["Malai Ghewar","Jaipur’s famous honeycomb sweet with rabri","₹199",["Seasonal"]],
-  ["Gulab Jamun with Rabri","Warm jamuns on chilled rabri","₹169",[]],
-  ["Hot Chocolate Brownie","With a scoop of vanilla ice cream","₹229",[]]]]];
+ ["pizza","Pizzas","Crispy crust, real mozzarella — our guests’ favourite.","P:food-pizza",[
+  ["Pesto Mexicano Pizza","Our signature — fresh pesto with a Mexican-style kick","",["Signature"]],
+  ["Caprino Pizza","A guest favourite, loaded with cheese","",[]],
+  ["Mushroom Pizza","Mushrooms, mozzarella and herbs","",[]],
+  ["Loaded Veggie Pizza","Peppers, olives, onion, tomato and sweet corn","",[]]]],
+ ["pasta","Pasta & sides","Creamy, comforting and made to share.","P:food-penne",[
+  ["Pink Sauce Penne","Creamy tomato sauce with herbs and parmesan","",["Most ordered"]],
+  ["Pasta with Cheesy Garlic Bread","Your pasta with a side of buttery, cheese-loaded garlic bread","",[]]]],
+ ["sandwiches","Sandwiches","Toasted, golden and packed with flavour.","P:food-sandwich",[
+  ["Pesto Mushroom Sandwich","Herby pesto mushrooms between toasted bread","",["Signature"]]]],
+ ["indian-chinese","Indian & Chinese","Local favourites and a Chinese menu our regulars swear by.","P:food-dinner-view",[
+  ["Chinese favourites","Ask our team for today’s Chinese picks","",["Guests love it"]],
+  ["Indian classics","Home-style Indian dishes — ask for today’s menu","",[]]]],
+ ["chai-coffee","Chai, coffee & cold drinks","Best enjoyed with Hawa Mahal in front of you.","U:1571934811356-5cc061b6821f",[
+  ["Masala Chai","Hot, spiced and just right at sunset","",["Must try"]],
+  ["Coffee","Hot or cold, made fresh","",[]],
+  ["Cold drinks & shakes","Something chilled for warm Jaipur afternoons","",[]]]]];
 document.getElementById('catnav').innerHTML=MENU.map(c=>`<a href="#${c[0]}">${c[1]}</a>`).join('');
 document.getElementById('menu').innerHTML=MENU.map(c=>`<section class="menu-cat" id="${c[0]}"><div class="wrap menu-cat-head">
- <div class="img reveal-img"><img src="${U(c[3],800)}" alt="" loading="lazy"></div>
+ <div class="img reveal-img"><img src="${c[3].startsWith('P:')?P(c[3].slice(2)):U(c[3].slice(2),800)}" alt="" loading="lazy"></div>
  <div><h2 class="h2">${c[1]}</h2><p class="intro">${c[2]}</p>
- ${c[4].map((i,k)=>`<div class="item reveal" style="--i:${k%4}"><div class="item-main"><h3>${i[0]}</h3><p>${i[1]}</p>${i[3].length?`<div class="tags">${i[3].map(t=>`<i>${t}</i>`).join('')}</div>`:''}</div><span class="dots" aria-hidden="true"></span><span class="price">${i[2]}</span></div>`).join('')}
- </div></div></section>`).join('');
+ ${c[4].map((i,k)=>`<div class="item reveal" style="--i:${k%4}"><div class="item-main"><h3>${i[0]}</h3><p>${i[1]}</p>${i[3].length?`<div class="tags">${i[3].map(t=>`<i>${t}</i>`).join('')}</div>`:''}</div>${i[2]?`<span class="dots" aria-hidden="true"></span><span class="price">${i[2]}</span>`:''}</div>`).join('')}
+ </div></div></section>`).join('')+`<div class="wrap"><p class="menu-note">A few of our guests’ favourites. The full menu with prices (about ₹200–1,200 per person) is at the café — or WhatsApp us on ${CAFE.phone} and we’ll send it over.</p></div>`;
 </script>
 <script src="site.js"></script>
 <script>
