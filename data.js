@@ -8,7 +8,8 @@ window.CAFE = {
   sub: "Café with a view",
   phone: "+91 99283 91150",
   wa: "919928391150",          // WhatsApp number (country code ke saath, bina +)
-  insta: "jaipurvista",
+  insta: "jaipur.vista111",
+  instaUrl: "https://www.instagram.com/jaipur.vista111/",
   address: "2nd & 3rd Floor, 34, Temple Amrit Raghunath, Dhabai Ji Ka Rasta, opposite Hawa Mahal, Pink City, Jaipur, Rajasthan 302002",
   shortAddress: "Rooftop, opposite Hawa Mahal, Pink City",
   hours: "Open every day · 8:00 am – 10:00 pm",

@@ -89,6 +89,8 @@ $('#book-btns').innerHTML = book.map(b => `<a href="${wa(b[2])}" target="_blank"
 
 /* visit */
 $('#map').src = C.mapEmbed;
+$('#ig-cta').href = C.instaUrl;
+$('#ig-visit').href = C.instaUrl;
 $('#dir').href = C.directions;
 $('#tel').href = 'tel:' + C.phone.replace(/\s/g, '');
 

@@ -23,6 +23,7 @@ document.body.insertAdjacentHTML('afterbegin', `<svg width="0" height="0" style=
 <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14a6.5 6.5 0 0 1 3.5 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
 <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Zm13 1h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
 <symbol id="i-rupee" viewBox="0 0 24 24"><path d="M7 4h10M7 8.5h10M7 4h3.5a4.5 4.5 0 0 1 0 9H7l7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>`);
 
@@ -35,10 +36,11 @@ $('#site-header').innerHTML = `<a class="skip-link" href="#main">Skip to content
 <div class="wrap head-in">
  <a class="brand" href="index.html" aria-label="${C.name} — home"><img src="assets/logo.jpg" alt="" width="48" height="48"><span>Jaipur Vista</span></a>
  <nav class="desktop-nav" aria-label="Main">${navHTML}</nav>
+ <a class="ig-btn" href="${C.instaUrl}" target="_blank" rel="noopener" aria-label="Jaipur Vista on Instagram (@${C.insta})"><svg aria-hidden="true"><use href="#i-insta"/></svg></a>
  <a class="btn btn-sm head-cta" href="${wa('Hi Jaipur Vista! I would like to book a table.')}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Book on WhatsApp</a>
  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
 </div>
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">${navHTML}</nav>`;
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">${navHTML}<a class="m-ig" href="${C.instaUrl}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>@${C.insta}</a></nav>`;
 
 const header = $('#site-header'), tog = $('.menu-toggle');
 tog.onclick = () => { const o = header.classList.toggle('nav-open'); tog.setAttribute('aria-expanded', o); tog.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); };
@@ -48,7 +50,7 @@ addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 1
 $('#site-footer').innerHTML = `<div class="wrap foot">
  <div class="foot-brand"><img src="assets/logo.jpg" alt="${C.name} logo" width="88" height="88" loading="lazy"><p>Jaipur aaye, Jaipur Vista nahi aaye?<br><b>Toh kya Jaipur aaye!</b></p></div>
  <div><h3>Visit</h3><p>${C.address}</p><a class="link" href="${C.directions}" target="_blank" rel="noopener">Get directions ${ar}</a></div>
- <div><h3>Contact</h3><p>${C.hours}</p><a href="tel:${C.phone.replace(/\s/g, '')}">${C.phone}</a><a href="${wa('Hi Jaipur Vista! ')}" target="_blank" rel="noopener">WhatsApp us</a><a href="https://instagram.com/${C.insta}" target="_blank" rel="noopener">Instagram</a></div>
+ <div><h3>Contact</h3><p>${C.hours}</p><a href="tel:${C.phone.replace(/\s/g, '')}">${C.phone}</a><a href="${wa('Hi Jaipur Vista! ')}" target="_blank" rel="noopener">WhatsApp us</a><a class="foot-ig" href="${C.instaUrl}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>@${C.insta}</a></div>
 </div>
 <div class="wrap foot-bot"><span>© ${new Date().getFullYear()} ${C.name} Café, Jaipur</span><span>Made by <a class="credit" href="https://taprizz.in" target="_blank" rel="noopener">taprizz.in</a></span></div>`;
 
