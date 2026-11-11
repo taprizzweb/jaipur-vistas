@@ -7,8 +7,8 @@ window.CAFE = {
   name: "Jaipur Vista",
   sub: "Café with a view",
   // ↓↓ Apna asli number daalein (WhatsApp number bina + aur space ke)
-  phone: "+91 90000 00000",
-  wa: "919000000000",
+  phone: "+91 99283 91150",
+  wa: "919928391150",
   insta: "jaipurvista",
   address: "Hawa Mahal Road, right opposite Hawa Mahal, Pink City, Jaipur, Rajasthan 302002",
   hours: "Open every day · 9:00 am – 11:00 pm",
