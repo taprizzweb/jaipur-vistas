@@ -365,3 +365,6 @@ h3{font-size:19px;font-weight:600}
 }
 @media (prefers-reduced-motion:reduce){.hero-copy>*,.hero-media,.hl::after{animation:none}}
 .reveal.in:hover{transition-delay:0s}
+.foot-bot{opacity:1}.foot-bot span:first-child{opacity:.7}
+.credit{display:inline!important;margin:0!important;color:var(--gold);font-weight:600}
+.credit:hover{text-decoration:underline;text-underline-offset:3px}

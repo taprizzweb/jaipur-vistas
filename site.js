@@ -50,7 +50,7 @@ $('#site-footer').innerHTML = `<div class="wrap foot">
  <div><h3>Visit</h3><p>${C.address}</p><a class="link" href="${C.directions}" target="_blank" rel="noopener">Get directions ${ar}</a></div>
  <div><h3>Contact</h3><p>${C.hours}</p><a href="tel:${C.phone.replace(/\s/g, '')}">${C.phone}</a><a href="${wa('Hi Jaipur Vista! ')}" target="_blank" rel="noopener">WhatsApp us</a><a href="https://instagram.com/${C.insta}" target="_blank" rel="noopener">Instagram</a></div>
 </div>
-<div class="wrap foot-bot"><span>© ${new Date().getFullYear()} ${C.name} Café, Jaipur</span><span>Made with love in the Pink City</span></div>`;
+<div class="wrap foot-bot"><span>© ${new Date().getFullYear()} ${C.name} Café, Jaipur</span><span>Made by <a class="credit" href="https://taprizz.in" target="_blank" rel="noopener">taprizz.in</a></span></div>`;
 
 document.body.insertAdjacentHTML('beforeend', `<a class="float-wa" href="${wa('Hi Jaipur Vista! I would like to book a table.')}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>`);
 
