@@ -5,30 +5,30 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Menu | Jaipur Vista Café — Opposite Hawa Mahal, Jaipur</title>
 <meta name="description" content="The Jaipur Vista menu — signature pizzas, pasta, pesto mushroom sandwich, Indian & Chinese dishes and chai, served on a rooftop opposite Hawa Mahal.">
-<meta name="theme-color" content="#1b4fa0">
+<meta name="theme-color" content="#16397a">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="menu">
+<body data-page="menu" class="ready">
 <header id="site-header"></header>
 <main id="main">
 <section class="page-hero">
+ <div class="bg" data-speed="-0.2"><img src="assets/photos/food-dinner-view.jpg" alt=""></div>
  <div class="wrap">
-  <p class="kicker">European · Indian · Chinese</p>
-  <h1>Our menu</h1>
-  <p>Pizzas, pastas, sandwiches, Indian and Chinese favourites and hot chai — all served with Hawa Mahal right in front of you.</p>
+  <p class="eyebrow">European · Indian · Chinese</p>
+  <h1 class="split">Our menu.<br><em>Served with a view.</em></h1>
+  <p class="reveal">Pizzas, pastas, sandwiches, Indian and Chinese favourites and hot chai — all served with Hawa Mahal right in front of you.</p>
  </div>
 </section>
 <nav class="cat-nav" aria-label="Menu categories"><div class="wrap" id="catnav"></div></nav>
 <div id="menu"></div>
-<section class="book menu-cta">
- <div class="wrap book-in">
-  <h2>Save your rooftop table</h2>
-  <p>Sunset tables fill up first — message us on WhatsApp.</p>
-  <a class="btn" style="background:#fff;color:var(--navy)" data-wa="Hi Jaipur Vista! I would like to book a table.">Book on WhatsApp <svg class="arrow"><use href="#i-arrow"/></svg></a>
- </div>
+<section class="menu-cta">
+ <p class="eyebrow" style="justify-content:center;color:var(--gold)">Ask for a view seat</p>
+ <h2 class="h2 split">Jaipur aaye ho?<br><em>Toh Vista zaroor aana.</em></h2>
+ <p class="reveal">Book a window or rooftop table — especially for sunset.</p>
+ <a class="btn" href="index.html#book">Book your table <svg class="arrow"><use href="#i-arrow"/></svg></a>
 </section>
 </main>
 <footer id="site-footer"></footer>
@@ -55,9 +55,9 @@ const MENU=[
   ["Cold drinks & shakes","Something chilled for warm Jaipur afternoons","",[]]]]];
 document.getElementById('catnav').innerHTML=MENU.map(c=>`<a href="#${c[0]}">${c[1]}</a>`).join('');
 document.getElementById('menu').innerHTML=MENU.map(c=>`<section class="menu-cat" id="${c[0]}"><div class="wrap menu-cat-head">
- <div class="img"><img src="${c[3].startsWith('P:')?P(c[3].slice(2)):U(c[3].slice(2),800)}" alt="" loading="lazy"></div>
- <div><h2>${c[1]}</h2><p class="intro">${c[2]}</p>
- ${c[4].map((i,k)=>`<div class="item"><div class="item-main"><h3>${i[0]}</h3><p>${i[1]}</p>${i[3].length?`<div class="tags">${i[3].map(t=>`<i>${t}</i>`).join('')}</div>`:''}</div>${i[2]?`<span class="price">${i[2]}</span>`:''}</div>`).join('')}
+ <div class="img reveal-img"><img src="${c[3].startsWith('P:')?P(c[3].slice(2)):U(c[3].slice(2),800)}" alt="" loading="lazy"></div>
+ <div><h2 class="h2">${c[1]}</h2><p class="intro">${c[2]}</p>
+ ${c[4].map((i,k)=>`<div class="item reveal" style="--i:${k%4}"><div class="item-main"><h3>${i[0]}</h3><p>${i[1]}</p>${i[3].length?`<div class="tags">${i[3].map(t=>`<i>${t}</i>`).join('')}</div>`:''}</div>${i[2]?`<span class="dots" aria-hidden="true"></span><span class="price">${i[2]}</span>`:''}</div>`).join('')}
  </div></div></section>`).join('')+`<div class="wrap"><p class="menu-note">A few of our guests’ favourites. The full menu with prices (about ₹200–1,200 per person) is at the café — or WhatsApp us on ${CAFE.phone} and we’ll send it over.</p></div>`;
 </script>
 <script src="site.js"></script>

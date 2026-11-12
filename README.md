@@ -12,9 +12,9 @@ Static website (no build step). Open `index.html` in a browser or host the folde
 6. **Menu & prices** — `MENU` array inside `menu.html` (prices are blank until you add them).
 
 ## Files
-- `index.html` — home page (hero, why visit, food, celebrations, gallery, reviews, WhatsApp booking, map)
+- `index.html` — home page (hero, don't-miss, dishes, celebrations, influencer points, gallery, reviews, booking, map)
 - `menu.html` — full menu
 - `data.js` — café details, reviews, photos
-- `site.js` — header, footer, scroll fade-ins
-- `home.js` — home page sections, gallery viewer, WhatsApp booking buttons
-- `style.css` — light blue-pottery café style (Outfit + DM Sans)
+- `site.js` — header, footer, shared animations
+- `home.js` — home page sections & booking form
+- `style.css` — brand styles (logo colours: royal blue, terracotta, peacock teal, gold, ivory)
