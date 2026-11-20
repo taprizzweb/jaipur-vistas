@@ -86,6 +86,8 @@ const onScroll = () => {
   });
   ticking = false;
 };
+const farCheck = () => document.body.classList.toggle('far', scrollY > 420);
+addEventListener('scroll', farCheck, { passive: true }); farCheck();
 addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
 onScroll();
 
